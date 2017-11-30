@@ -1,0 +1,25 @@
+<div class="container">
+  <div >
+    <h2 class="modal-title">Kontakti</h2>
+  </div>
+  <table class="table table-hover table-bordered table-responsive table-condensed">
+    <thead class="success">
+      <tr>
+        <th class="col-xs-1">Id</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Position</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let kontakt of kontakti">
+        <td class="col-xs-1">
+          <img class="img-circle kontakt" src="{{kontakt.poster}}" />
+        </td>
+        <td>{{kontakt.name}}</td>
+        <td>{{kontakt.surname}}</td>
+        <td>{{getType(kontakt.position)}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
